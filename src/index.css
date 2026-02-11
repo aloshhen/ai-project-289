@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050505;
+    color: #E5E5E5;
+    overflow-x: hidden;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(229, 229, 229, 0.1);
+  }
+
+  .glass-card-hover {
+    background: linear-gradient(135deg, rgba(229, 229, 229, 0.05) 0%, rgba(20, 20, 20, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(229, 229, 229, 0.15);
+  }
+
+  .chrome-gradient {
+    background: linear-gradient(135deg, rgba(229, 229, 229, 0.1) 0%, rgba(229, 229, 229, 0.05) 50%, rgba(229, 229, 229, 0.1) 100%);
+  }
+
+  .flare-glow {
+    box-shadow: 0 0 30px rgba(255, 77, 0, 0.3), 0 0 60px rgba(255, 77, 0, 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 77, 0, 0.5);
+  }
+
+  .number-glow {
+    text-shadow: 0 0 10px rgba(229, 229, 229, 0.3);
+  }
+
+  .liquid-shine {
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(229, 229, 229, 0.05);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 77, 0, 0.3);
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 77, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+}
